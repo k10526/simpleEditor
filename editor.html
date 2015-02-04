@@ -17,6 +17,16 @@
 	<option value="Courier">Courier</option>
 	<option value="Times New Roman">Times New Roman</option>
 </select>
+<select onchange="document.execCommand('fontsize', false, this[this.selectedIndex].value);this.selectedIndex=0;">
+	<option selected>글자크기</option>
+	<option value="1">Very small</option>
+	<option value="2">small</option>
+	<option value="3">Normal</option>
+	<option value="4">Medium</option>
+	<option value="5">large</option>
+	<option value="6">Very large</option>
+	<option value="7">Maximum</option>
+</select>
 <button onclick="document.execCommand('bold');">굵게</button>
 <button onclick="document.execCommand('italic');">기울임</button>
 <button onclick="document.execCommand('underline');">밑줄</button>
