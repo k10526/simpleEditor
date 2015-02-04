@@ -1,5 +1,18 @@
 <html>
 <body>
+<select onchange="document.execCommand('formatblock', false, this[this.selectedIndex].value);this.selectedIndex=0;">
+	<option selected>----------------</option>
+	<option value="h1">Title &lt;h1&gt;</option>
+	<option value="h2">Title &lt;h2&gt;</option>
+	<option value="h3">Title &lt;h3&gt;</option>
+	<option value="h4">Title &lt;h4&gt;</option>
+	<option value="h5">Title &lt;h5&gt;</option>
+	<option value="h6">Title &lt;h6&gt;</option>
+	<option value="p">Paragraph &lt;p&gt;</option>
+</select>
+<button onclick="document.execCommand('bold');">굵게</button>
+<button onclick="document.execCommand('italic');">기울임</button>
+<button onclick="document.execCommand('underline');">밑줄</button>
 <div contenteditable="true"></div>
 </body>
 
