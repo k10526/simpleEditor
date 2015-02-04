@@ -30,7 +30,9 @@
 <button onclick="document.execCommand('bold');">굵게</button>
 <button onclick="document.execCommand('italic');">기울임</button>
 <button onclick="document.execCommand('underline');">밑줄</button>
-<input type="text" id="fontColor" value='000'/><button onclick="document.execCommand('forecolor', false, document.getElementById('fontColor').value)">글자색</button>
-<div contenteditable="true"></div>
+<input type="text" id="fontColor" value='000'/>
+<button onclick="var sel = window.getSelection();sel.removeAllRanges();sel.addRange(saveRng);document.execCommand('forecolor', false, document.getElementById('fontColor').value)">글자색</button>
+<div contenteditable="true" onblur="saveRng = window.getSelection().getRangeAt(0)">
+</div>
 </body>
 
